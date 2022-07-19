@@ -12,5 +12,8 @@ megfogalmazottakat. Egy dinamikus felhasználói felület segítségével
 a szabályok bővíthetőek, módosíthatóak.
 
 <!-- more -->
+[DroolsFools a github-on](https://github.com/lsmhun/droolsfools)
 
-{% remote_include  https://raw.githubusercontent.com/lsmhun/droolsfools/master/docs/descr_hu.md %}
+[Markdown dokumentáció](https://github.com/lsmhun/droolsfools/blob/master/docs/descr_hu.md)
+
+<!--- { % remote_include  https://raw.githubusercontent.com/lsmhun/droolsfools/master/docs/descr_hu.md %} -->
