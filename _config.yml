@@ -1,0 +1,20 @@
+# Site settings
+title: lsmhun.github.io
+lead: lsmhun - developer blog
+description: lsmhun - developer blog
+url: "http://lsmhun.github.io"
+author: lsmhun
+github_username: lsmhun
+exclude: [README.md, LICENCE]
+
+lang: en 
+languages: ["en", "hu"] 
+permalink: /:categories/:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown
+excerpt_separator: "<!-- more -->"
+
+kramdown:
+  input: GFM
+  hard_wrap: false

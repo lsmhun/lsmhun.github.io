@@ -1,9 +1,16 @@
-<html>
-	<head>
-		<title>lsmhun.github.io</title>
-	</head>
-	<body>
-		<h1>lsmhun.github.io</h1>
-		<p>under construction</p>
-	</body>
-</html>
+---
+layout: default
+---
+<main>
+	<script>
+		var lang = navigator.language || navigator.userLanguage;
+		if (lang.indexOf('hu') == 0)
+			window.location = '/hu/index';
+		else
+			window.location = '/en/index';
+	</script>
+</main>
+
+
+
+

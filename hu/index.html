@@ -1,0 +1,39 @@
+---
+layout: page
+title: lsmhun
+lang: hu
+description: lsmhun főoldal
+keywords: [main]
+---
+
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-sm-10 blog-main">
+
+			{% assign myLangPosts = site.posts | where:'lang', 'hu' %}
+
+			{% for post in myLangPosts limit:3 %}
+			{% assign date = post.date %}
+
+			<article>
+				<div class="blog-post  {{ post.lang }}_class">
+
+					<header>
+						<h1 class="blog-post-title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
+						<p class="blog-post-meta">{% include date.html %}</p>
+					</header>
+
+					{{ post.excerpt }}
+
+					<footer>
+						<p class="{{ post.lang }}_class"><a href="{{ BASE_PATH }}{{ post.url }}">Tovább...</a></p>
+					</footer>
+				</div>
+			</article>
+
+			{% endfor %}
+		</div>
+	</div>
+</div>
