@@ -1,6 +1,11 @@
 # lsmhun.github.io
 lsmhun github pages
 
+# Start locally
+```shell
+jekyl serve
+```
+
 # New post creation
 
 ```

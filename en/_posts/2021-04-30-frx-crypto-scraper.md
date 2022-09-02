@@ -38,6 +38,10 @@ features, but they are adding it really slow. My case could be fully supported w
 [this](https://github.com/helm/helm/pull/6876) change, but they refused it. It's okay
 if they don't like it, but no alternatives were presented. 
 
+_UPDATE: I found [post-render](https://helm.sh/docs/topics/advanced/) functionality_
+_with [this](https://github.com/thomastaylor312/advanced-helm-demos/tree/master/post-render)_
+_example. It solves this problem._
+
 I could switch to [Terraform](https://www.terraform.io/), but no experiences yet. 
 I should learn about it more.
 
