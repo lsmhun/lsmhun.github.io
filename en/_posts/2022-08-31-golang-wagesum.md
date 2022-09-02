@@ -24,7 +24,7 @@ PostreSQL is the database and it will handle the long running, recursive
 SQL queries with _go routines_.
 
 <!-- more -->
-[Wagesum on github](https://github.com/lsmhun/wagesum)
+[Wagesum on github](https://github.com/lsmhun/wage-sum-server)
 
 This blog entry is subjective and of course I don't have the Philosopher's Stone.
 From the horses' mounth Go language idea popped up, when creators

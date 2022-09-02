@@ -27,7 +27,7 @@ ki a kéréseket, adatbázisban tárol adatokat és goroutinokkal segít javíta
 a sok lekérésből adódó terhelést.
 
 <!-- more -->
-[Wagesum a github-on](https://github.com/lsmhun/wagesum)
+[Wagesum a github-on](https://github.com/lsmhun/wage-sum-server)
 
 Szubjektív szempontokat fogalmazok meg, és a változtatás joga is megillet. :)
 Állítólag a nyelv ötlete is akkor fogant meg az alkotók fejében, amikor 
