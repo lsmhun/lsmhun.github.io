@@ -23,7 +23,7 @@ a fenti együttműködésre próbál megoldást kínálni, kényelmes felületet
 mind a producer, mind a consumer oldal számára. 
 
 <!-- more -->
-[API contract a github-on](https://github.com/lsmhun/demo-api-contract)
+[API contract a github-on](https://github.com/lsmhun/demo-api-contract/blob/main)
 
 
 ## Technológiák
@@ -56,9 +56,9 @@ public class LoanApplicationServiceTests {
 Vegyünk egy minta alkalmazást, ahol a fent leírtak bemutathatóak. Legyen Spring boot microservice, szeparált API
 leírással, egy generált vázat implementáló szerver oldallal és egy klienssel.
 
-- [API](https://github.com/lsmhun/demo-api-contract/demo-contract-api/README.md)
-- [Szerver oldal](https://github.com/lsmhun/demo-api-contract/demo-contract-server/README.md)
-- [Kliens oldal](https://github.com/lsmhun/demo-api-contract/demo-contract-client/README.md)
+- [API](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-api/README.md)
+- [Szerver oldal](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-server/README.md)
+- [Kliens oldal](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-client/README.md)
 
 A példa szerver alkalmazás első verziója a kért ország legutolsó év átlaghőmérsékletét adja vissza. 
 Ezt nyilván tovább érdemes fejleszteni, ezért már rögtön adatbázist is teszünk alá. 
@@ -151,7 +151,7 @@ spring.main.web-application-type=none
 A kliens kódja lényegében az API projectben generált osztályokban található, csak az URL-t állítjuk be kézzel,
 ezt természetesen a szabványos Spring paraméterezéssel felül is írhatjuk.
 
-Érdekességként a [TemperatureStartupArgumentCollector](https://github.com/lsmhun/demo-api-contract/demo-contract-client/src/main/java/hu/lsm/demo/contract/client/startup/TemperatureStartupArgumentCollector.java)
+Érdekességként a [TemperatureStartupArgumentCollector](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-client/src/main/java/hu/lsm/demo/contract/client/startup/TemperatureStartupArgumentCollector.java)
 osztályban látható, hogy miként veszünk át paramétert a parancssorból.
 
 Futtatás:
@@ -159,7 +159,7 @@ Futtatás:
 mvnw spring-boot:run -Dspring-boot.run.arguments=--temperature.countryList=hu,li
 ```
 
-A lényegi contract teszt a [TemperatureClientContractTest](https://github.com/lsmhun/demo-api-contract/demo-contract-client/src/test/java/hu/lsm/demo/contract/client/TemperatureClientContractTest.java)
+A lényegi contract teszt a [TemperatureClientContractTest](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-client/src/test/java/hu/lsm/demo/contract/client/TemperatureClientContractTest.java)
 osztályban látható. A lényeg az annotációban van, de ha lefuttatjuk, látható, hogy a Spring Cloud Contract
 indít egy Wiremock szervert, amibe betölti a stub-ban megadott contractokat. A paraméterben látható, hogy
 _stubsMode = StubRunnerProperties.StubsMode.LOCAL_ használok, ami a helyi repositoryból próbálja meg feloldani
@@ -172,7 +172,7 @@ Itt említsük meg, hogy látható, hogy a verziót most bevéstem az annotáci�
 akkor nyilván ahhoz igazítod a tesztedet.
 
 ## Integráció
-Készült egy [build script](https://github.com/lsmhun/demo-api-contract/build.sh), ahol egyben lefuttat mindent, amire csak szükség van. Itt megemlíteném
+Készült egy [build script](https://github.com/lsmhun/demo-api-contract/blob/main/build.sh), ahol egyben lefuttat mindent, amire csak szükség van. Itt megemlíteném
 a takari fele maven wrapper begyűjtőt, ami segít abban, hogy ne kelljen a bináris wrappert mellékelni.
 ```shell
 mvn io.takari:maven:wrapper
@@ -187,7 +187,7 @@ megismerésére ennyi elegendő.
 ![Contract tests in IDEA](/artifacts/contract-demo-02-with-comments.png)
 
 ## Hasznos linkek
-- https://cloud.spring.io/spring-cloud-contract/reference/html/
-- https://stackoverflow.com/questions/4955635/how-to-add-local-jar-files-to-a-maven-project
-- https://medium.com/better-practices/api-first-software-development-for-modern-organizations-fdbfba9a66d3
-- https://www.baeldung.com/spring-boot-command-line-arguments
+- [Spring cloud contract](https://cloud.spring.io/spring-cloud-contract/reference/html/)
+- [howto add local jar files to a maven project](https://stackoverflow.com/questions/4955635/how-to-add-local-jar-files-to-a-maven-project
+- [API first](https://medium.com/better-practices/api-first-software-development-for-modern-organizations-fdbfba9a66d3)
+- [Spring boot command line arguments](https://www.baeldung.com/spring-boot-command-line-arguments)

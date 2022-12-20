@@ -22,7 +22,7 @@ project offers a good solution to this cooperation with comfortable interface fo
 mind a producer, mind a consumer oldal számára. 
 
 <!-- more -->
-[API contract on github](https://github.com/lsmhun/demo-api-contract)
+[API contract on github](https://github.com/lsmhun/demo-api-contract/blob/main)
 
 ## Technology
 [Marcin Grzejszczak](https://toomuchcoding.com/) is one of the lead developer of Spring Cloud Contract. 
@@ -51,9 +51,9 @@ public class LoanApplicationServiceTests {
 ## Abstract
 The example application has to identify the hottest country based on average temperature. It will have three compontents:
 
-- [API](https://github.com/lsmhun/demo-api-contract/demo-contract-api/README.md)
-- [Server side](https://github.com/lsmhun/demo-api-contract/demo-contract-server/README.md)
-- [Client side](https://github.com/lsmhun/demo-api-contract/demo-contract-client/README.md)
+- [API](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-api/README.md)
+- [Server side](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-server/README.md)
+- [Client side](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-client/README.md)
 
 Server side will present the requested country last year's average temperature (in version 1.0). 
 It will use database for future development.
@@ -63,7 +63,7 @@ and it will present the hottest countries (it is possible to have similar averag
 
 ## Implementation - version 1.0
 ### API
-The most important part is the [API definítion](https://github.com/lsmhun/demo-api-contract/demo-contract-api/src/main/resources/openapi/v1/demo-contract-openapi.yaml).
+The most important part is the [API definítion](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-api/src/main/resources/openapi/v1/demo-contract-openapi.yaml).
 [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator) was chosen, however 
 [Swagger](https://swagger.io/tools/swagger-codegen/) plugin is more powerful.
 
@@ -141,7 +141,7 @@ spring.main.web-application-type=none
 RestTemplate client code has been generated in API project. It can be generated in this project also, but not now.
 Just the URL has to be configurable. Default host and port is in application.properties.
 
-[TemperatureStartupArgumentCollector](https://github.com/lsmhun/demo-api-contract/demo-contract-client/src/main/java/hu/lsm/demo/contract/client/startup/TemperatureStartupArgumentCollector.java)
+[TemperatureStartupArgumentCollector](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-client/src/main/java/hu/lsm/demo/contract/client/startup/TemperatureStartupArgumentCollector.java)
 will handle incoming parameters from CLI.
 
 Example execution:
@@ -149,7 +149,7 @@ Example execution:
 mvnw spring-boot:run -Dspring-boot.run.arguments=--temperature.countryList=hu,li
 ```
 
-Client side contract test is in [TemperatureClientContractTest](https://github.com/lsmhun/demo-api-contract/demo-contract-client/src/test/java/hu/lsm/demo/contract/client/TemperatureClientContractTest.java)
+Client side contract test is in [TemperatureClientContractTest](https://github.com/lsmhun/demo-api-contract/blob/main/demo-contract-client/src/test/java/hu/lsm/demo/contract/client/TemperatureClientContractTest.java)
 class. Annotations are the most important in this test. During test execution it starts a wiremock server and loads
 contracts, then it will run the tests with that. As you can see 
 _stubsMode = StubRunnerProperties.StubsMode.LOCAL_ was used, which will try to use the local repository for stubs. 
@@ -160,7 +160,7 @@ stub version, however if release version will be _x.y.z_ then it will be the tar
 of fixed port. 
 
 ## Integration
-Small [build script](https://github.com/lsmhun/demo-api-contract/build.sh) was created. It will build and run all tests. Takari Maven wrapper collector is a
+Small [build script](https://github.com/lsmhun/demo-api-contract/blob/main/build.sh) was created. It will build and run all tests. Takari Maven wrapper collector is a
 useful tool (no need to upload binary maven wrapper jar into your repository)
 ```shell
 mvn io.takari:maven:wrapper
@@ -175,7 +175,7 @@ show the basics.
 ![Contract tests in IDEA](/artifacts/contract-demo-02-with-comments.png)
 
 ## Useful links
-- https://cloud.spring.io/spring-cloud-contract/reference/html/
-- https://stackoverflow.com/questions/4955635/how-to-add-local-jar-files-to-a-maven-project
-- https://medium.com/better-practices/api-first-software-development-for-modern-organizations-fdbfba9a66d3
-- https://www.baeldung.com/spring-boot-command-line-arguments
+- [Spring cloud contract](https://cloud.spring.io/spring-cloud-contract/reference/html/)
+- [howto add local jar files to a maven project](https://stackoverflow.com/questions/4955635/how-to-add-local-jar-files-to-a-maven-project
+- [API first](https://medium.com/better-practices/api-first-software-development-for-modern-organizations-fdbfba9a66d3)
+- [Spring boot command line arguments](https://www.baeldung.com/spring-boot-command-line-arguments)

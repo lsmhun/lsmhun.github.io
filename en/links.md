@@ -7,7 +7,7 @@ keywords: [other pages]
 ---
 
 # Links
-- [JTechLog](http://www.jtechlog.hu)
-- [javax0](https://javax0.wordpress.com/)
-- [DZone](https://dzone.com/)
+- [JTechLog - István Viczián's blog](http://www.jtechlog.hu)
+- [javax0 - István Verhás' blog](https://javax0.github.io/)
+- [DZone developer portal](https://dzone.com/)
 

@@ -58,7 +58,7 @@ _func (s MyStruct) f(p param) (RetVal, error){...}_
 
 Functional paradigm is not just supported, but recommended. It's easy
 to define a function. In wagesum application 
-[emp_sal_service_test](../internal/pkg/emp_sal_service/emp_sal_service_test.go)
+[emp_sal_service_test](https://github.com/lsmhun/wage-sum-server/tree/main/internal/pkg/emp_sal_service/emp_sal_service_test.go)
 uses it, however this test class is just scratches the surface. 
 
 In the meantime it's not a secret that C language was the ascendant, 
@@ -129,7 +129,7 @@ in Scala. Zio calls this feature as _fiber_. In Java it will be included
 in the near future with [Project Loom](https://openjdk.org/projects/loom/).
 
 Wagesum application uses go routines in
-[emp_sal_service](../internal/pkg/emp_sal_service/emp_sal_service.go) 
+[emp_sal_service](https://github.com/lsmhun/wage-sum-server/tree/main/internal/pkg/emp_sal_service/emp_sal_service.go) 
 ILong running, recursive queries will run parallel and processed 
 by _channels_.
 
@@ -151,12 +151,12 @@ it is already successful. A new language is always a new window
 so it's worth a try! 
 
 ## Links
-* https://towardsdev.com/golang-productivity-hacks-part-3-auto-generating-test-4c8055dc7946
-* https://eli.thegreenplace.net/2021/rest-servers-in-go-part-4-using-openapi-and-swagger/
-* https://stackoverflow.com/questions/7106012/download-a-single-folder-or-directory-from-a-github-repo
-* https://ribice.medium.com/serve-swaggerui-within-your-golang-application-5486748a5ed4
-* https://github.com/GoogleCloudPlatform/golang-samples
-* https://medium.com/@rosaniline/unit-testing-gorm-with-go-sqlmock-in-go-93cbce1f6b5b
-* https://medium.com/@ankur_anand/how-to-mock-in-your-go-golang-tests-b9eee7d7c266
-* https://nathanleclaire.com/blog/2014/02/15/how-to-wait-for-all-goroutines-to-finish-executing-before-continuing/ 
-* https://swagger.io/docs/specification/authentication/oauth2/
+* [towardsdev](https://towardsdev.com/golang-productivity-hacks-part-3-auto-generating-test-4c8055dc7946)
+* [golang with openapi](https://eli.thegreenplace.net/2021/rest-servers-in-go-part-4-using-openapi-and-swagger/)
+* [download a single folder or directory from a github repo](https://stackoverflow.com/questions/7106012/download-a-single-folder-or-directory-from-a-github-repo)
+* [swagger-ui with golang](https://ribice.medium.com/serve-swaggerui-within-your-golang-application-5486748a5ed4)
+* [Google golang samples](https://github.com/GoogleCloudPlatform/golang-samples)
+* [gorm and sqlmock](https://medium.com/@rosaniline/unit-testing-gorm-with-go-sqlmock-in-go-93cbce1f6b5b)
+* [golang test mocking](https://medium.com/@ankur_anand/how-to-mock-in-your-go-golang-tests-b9eee7d7c266)
+* [Nathan Leclaire goroutines](https://nathanleclaire.com/blog/2014/02/15/how-to-wait-for-all-goroutines-to-finish-executing-before-continuing/ )
+
